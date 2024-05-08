@@ -42,6 +42,23 @@ module.exports = {
           }
         }
       },
+      // {
+      //   test: /\.js?$/,
+      //   exclude: /node_modules\/(?!(@mybricks)\/).*/,
+      //   use: {
+      //       loader: 'babel-loader',
+      //       options: {
+      //          presets: [["@babel/preset-env", { useBuiltIns: 'usage', corejs: { version: 3 } }]],
+      //           plugins: [
+      //           ['@babel/plugin-transform-runtime', {
+      //               "corejs": 3, // 当我们使用 ES6 的静态事件或内置对象时自动引入 babel-runtime/core-js
+      //               "helpers": true,// 避免内联的 helper 代码在多个文件重复出现，使用babel-runtime/helpers 来替换
+      //               "regenerator": true // 转换成使用regenerator runtime来避免污染全局域
+      //           }]
+      //       ]
+      //       }
+      //   }
+      // },
       {
         test: /\.css$/, //匹配 css 文件
         use: ['style-loader','css-loader']
