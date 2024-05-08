@@ -3,7 +3,7 @@
   <Renderer
     v-show="_show"
     ref="_comRef"
-    :props="{ ..._childProps, title }"
+    :props="{ ..._childProps }"
     :config="_config"
     :json="_json"
     :comDefs="_comDefs"
@@ -13,19 +13,16 @@
 
 <script lang="ts">
 import { ref, defineComponent } from 'vue';
-import RendererComponent from '@mybricks/renderer-pc/src/toVue/index.vue';
+import RendererComponent from '@mybricks/renderer-pc/toVue';
 import { toJSON, config } from './config';
-import Card from '@mybricks/comlib-pc-normal/es/Card';
-import Toolbar from '@mybricks/comlib-pc-normal/es/Toolbar';
-import Link from '@mybricks/comlib-pc-normal/es/Link';
-import Text from '@mybricks/comlib-pc-normal/es/Text';
+import CustomButton from '@mybricks/comlib-pc-normal/es/Button2';
 
-export default defineComponent<{ title: string }>({
+export default defineComponent<{}>({
   components: {
     Renderer: RendererComponent,
   },
   emits: {},
-  defineExpose: ['cat1', 'cat2'],
+  defineExpose: [],
   setup(props, ctx) {
     const _comRef = ref();
     const _show = ref(false);
@@ -36,26 +33,10 @@ export default defineComponent<{ title: string }>({
       _childProps: {},
       _config: config,
       _json: toJSON,
-      _comDefs: {
-        'mybricks.normal-pc.card': { runtime: Card },
-        'mybricks.normal-pc.toolbar': { runtime: Toolbar },
-        'mybricks.normal-pc.link': { runtime: Link },
-        'mybricks.normal-pc.text': { runtime: Text },
-      },
+      _comDefs: { 'mybricks.normal-pc.button2': CustomButton },
     };
   },
   methods: {
-    cat1(params: string) {
-      this._getRef(params, 'cat1', null).then((ref) => {
-        ref.cat1(params);
-      });
-    },
-    cat2(params: string) {
-      this._getRef(params, 'cat2', null).then((ref) => {
-        ref.cat2(params);
-      });
-    },
-
     _myOnMounted() {
       setTimeout(() => {
         this._show = true;

@@ -1,24 +1,24 @@
 ## README
 
-**TestCard**
+**TabAndButton**
 
 此组件由 MyBricks 平台生成
-地址：https://my.mybricks.world/mybricks-app-pc-cdm/index.html?id=562086822649925
+地址：https://my.mybricks.world/mybricks-app-pc-cdm/index.html?id=562434472988741
 
 **用法**
 
 ```vue
 <template>
-  <test-card ref="comRef" prop1="自定义值" />
+  <tab-and-button ref="comRef" prop1="自定义值" />
 </template>
 
 <script lang="ts">
 import { ref } from 'vue'
-import TestCard from './TestCard.vue'
+import TabAndButton from './TabAndButton.vue'
 
 export default {
   components: {
-    TestCard,
+    TabAndButton,
   },
   setup() {
     const comRef = ref()

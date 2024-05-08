@@ -19,6 +19,6 @@
     "strict": false,
     "checkJs": false
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.vue", "./node_modules/@mybricks/**/*" ],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.vue"],
   "exclude": ["dist/*", "node_modules/*"]
 }
