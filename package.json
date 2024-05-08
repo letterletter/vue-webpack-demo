@@ -29,7 +29,8 @@
     "webpack-merge": "^5.10.0"
   },
   "dependencies": {
-    "@mybricks/renderer-pc": "^1.0.9",
-    "vue": "^3.4.27"
+    "@mybricks/renderer-pc": "^1.0.11",
+    "vue": "^3.4.27",
+    "@mybricks/comlib-pc-normal": "1.5.95"
   }
 }
