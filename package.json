@@ -32,8 +32,8 @@
   },
   "dependencies": {
     "@babel/runtime-corejs3": "^7.24.5",
-    "@mybricks/comlib-pc-normal": "^1.5.95",
-    "@mybricks/renderer-pc": "^1.0.11",
+    "@mybricks/renderer-pc": "1.0.18",
+    "simple-ts-letter-f1": "^1.0.1",
     "vue": "^3.4.27"
   }
 }

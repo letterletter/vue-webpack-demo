@@ -12,4 +12,5 @@ h2 {
   position: relative;
   height: 100%;
   border: 1px solid green;
+  min-height: 700px;
 }

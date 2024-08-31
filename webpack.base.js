@@ -19,7 +19,9 @@ module.exports = {
       },
       {
         test: /\.(tsx|ts|js)?$/,
-        exclude: /node_modules\/(?!(@mybricks)\/).*/, // 排除@Mybricks下面的包，只有@Mybricks/下面的包被处理
+        exclude: /node_modules/,
+        // exclude: /node_modules\/(?!(@mybricks)\/).*/, // 排除@Mybricks下面的包，只有@Mybricks/下面的包被处理        
+      include: [path.resolve(__dirname,'src'), /node_modules\/(@mybricks|simple-ts-letter-f1)\/.*/],
         use: {
           loader: 'babel-loader',
           options: {
